@@ -1,0 +1,92 @@
+/* Stylish cursive font for navbar brand */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.c-item{
+    height: 480px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.package-img {
+    height: 250px; 
+    object-fit: cover; 
+    width: 100%; 
+}
+
+/* Center the FAQ Section */
+#faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure the content is centered vertically */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Styling for the accordion item */
+.accordion-item {
+    border-radius: 10px; /* Add rounded corners to each item */
+    border: 1px solid #ddd; /* Optional: Add a border to the accordion items */
+    overflow: hidden;
+}
+
+/* Styling for the accordion button */
+.accordion-button {
+    border-radius: 10px; /* Add rounded corners to the accordion button */
+}
+
+/* Optional: Add shadow to the accordion items for a subtle 3D effect */
+.accordion-item.rounded-3.shadow-sm {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the accordion inside the section */
+.accordion {
+    max-width: 800px; /* Optional: Set a max-width to keep the accordion from being too wide */
+    margin: 0 auto; /* Center the accordion horizontally */
+}
+
+/* Center the FAQ heading */
+#faq h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .fab, footer .fas {
+    margin-right: 10px;
+}
+
+footer hr {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .container {
+    max-width: 1200px;
+}

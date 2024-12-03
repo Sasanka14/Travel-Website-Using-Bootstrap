@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndianOdyssey - Travel With Us</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon for a travel website.png">
+    <!-- Bootstrap CSS for responsive and styled components -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Font for cursive style -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Link to external CSS for custom styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Website branding -->
+            <a class="navbar-brand ms-5" href="#">IndianOdyssey</a>
+            <!-- Button for toggling navigation links in smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Booking Modal for tour booking form -->
+        <section class="modal" tabindex="-1" id="booking-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Book a Tour</h5>
+                        <!-- Close button for modal -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="#">
+                            <!-- Row for form fields -->
+                            <div class="row">
+                                <!-- Email Input -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating mb-3">
+                                        <input id="email" type="email" class="form-control" placeholder="Your Email">
+                                        <label for="email">Email Address</label>
+                                    </div>
+                                </div>
+                                <!-- Name Input -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating mb-3">
+                                        <input id="name" type="text" class="form-control" placeholder="Your Name">
+                                        <label for="name">Name</label>
+                                    </div>
+                                </div>
+                                <!-- Phone Input -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating mb-3">
+                                        <input id="tel" type="tel" class="form-control" placeholder="Your Phone">
+                                        <label for="tel">Your Phone No</label>
+                                    </div>
+                                </div>
+                                <!-- Tour Selection Dropdown -->
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <select id="select" class="form-select">
+                                            <option value="" selected disabled>Pick a Tour</option>
+                                            <option value="1">Adventure Tour - ₹20,000</option>
+                                            <option value="2">Relaxation Tour - ₹15,000</option>
+                                            <option value="3">Cultural Tour - ₹12,000</option>
+                                            <option value="4">Mystery Tour - ₹18,000</option>
+                                            <option value="5">History Tour - ₹10,000</option>
+                                            <option value="6">Literature Tour - ₹14,000</option>
+                                        </select>
+                                        <label for="select">Pick a Tour</label>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Checkout</button>
+                    </div>
+                </div>
+            </div>
+            </>
+        </section>
+
+        <!-- Carousel Section for showcasing destinations -->
+        <section id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators for the slides -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active c-item">
+                    <img src="images/Jammu.jpg" class="d-block w-100 c-img" alt="Jammu">
+                    <div class="carousel-caption">
+                        <h5>Explore the Paradise: Jammu & Kashmir</h5>
+                        <p>Embark on a journey to the serene valleys and majestic landscapes of Jammu & Kashmir, the
+                            crown jewel of India.</p>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book a
+                            Tour</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item c-item">
+                    <img src="images/Karnataka.jpg" class="d-block w-100 c-img" alt="Karnataka">
+                    <div class="carousel-caption">
+                        <h5>The Cultural Heartbeat: Karnataka</h5>
+                        <p>Discover Karnataka's vibrant culture, historic palaces, and lush green coffee plantations
+                            that leave an indelible mark.</p>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book a
+                            Tour</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item c-item">
+                    <img src="images/Taj_Mahal.jpg" class="d-block w-100 c-img" alt="Taj Mahal">
+                    <div class="carousel-caption ">
+                        <h5>Symbol of Love: The Taj Mahal</h5>
+                        <p>Visit the iconic Taj Mahal, a UNESCO World Heritage site and one of the Seven Wonders of the
+                            World.</p>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book a
+                            Tour</button>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item c-item">
+                    <img src="images/Tamil Naidu.jpg" class="d-block w-100 c-img" alt="Tamil Nadu">
+                    <div class="carousel-caption">
+                        <h5>The Land of Temples: Tamil Nadu</h5>
+                        <p>Marvel at Tamil Nadu's architectural wonders and immerse yourself in its rich traditions and
+                            delectable cuisine.</p>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book a
+                            Tour</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Navigation Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- Overview Section for Indian Odyssey -->
+        <section class="overview text-center py-5" style="background-color: #d3dae1;">
+            <div class="container">
+                <h2 class="mb-4">Discover the Wonders of India!</h2>
+                <p class="lead">Embark on unforgettable journeys with IndianOdyssey.</p>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <h4 class="mb-3"><i class="bi bi-stars"></i> Enchanting Destinations</h4>
+                        <p>Experience India's vibrant culture, majestic landscapes, and timeless wonders.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="mb-3"><i class="bi bi-wallet2"></i> Flexible Payments</h4>
+                        <p>Book now with only 5% upfront and enjoy hassle-free trips.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="mb-3"><i class="bi bi-people"></i> Trusted by Thousands</h4>
+                        <p>Join 10,000+ happy travelers who’ve explored India with us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section for Tour Packages -->
+        <section id="packages" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Our Packages</h2>
+                <div class="row">
+                    <!-- Adventure Tour -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="images/Adventure Tour.jpg" class="card-img-top img-fluid package-img"
+                                alt="Adventure Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">Adventure Tour</h5>
+                                <p class="card-text">Unleash your inner adventurer and experience thrills like never
+                                    before.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#booking-modal">Book Now</a>
+                                <!-- View More Button -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#adventureModal">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Adventure Tour -->
+                    <div class="modal fade" id="adventureModal" tabindex="-1" aria-labelledby="adventureModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="adventureModalLabel">Adventure Tour Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Package Details:</h5>
+                                    <p>Unleash your inner adventurer and experience thrills like never before. The
+                                        Adventure Tour offers a range of activities including mountain trekking,
+                                        rafting, and camping. It's perfect for adrenaline junkies looking to challenge
+                                        themselves!</p>
+                                    <ul>
+                                        <li>Duration: 7 Days</li>
+                                        <li>Price: ₹20,000</li>
+                                        <li>Inclusions: Transport, Accommodation, Adventure Activities</li>
+                                    </ul>
+                                    <h5>Additional Information:</h5>
+                                    <p>This package includes full board meals and expert guides for all activities. The
+                                        price is per person and is based on twin-sharing accommodation. Book now and get
+                                        ready for the ultimate adventure!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#booking-modal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Relaxation Tour -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="images/Relaxation Tour.jpg" class="card-img-top img-fluid package-img"
+                                alt="Relaxation Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">Relaxation Tour</h5>
+                                <p class="card-text">Relax and unwind in serene surroundings. Perfect for a stress-free
+                                    getaway.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#booking-modal">Book Now</a>
+                                <!-- View More Button -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#relaxationModal">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Relaxation Tour -->
+                    <div class="modal fade" id="relaxationModal" tabindex="-1" aria-labelledby="relaxationModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="relaxationModalLabel">Relaxation Tour Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Package Details:</h5>
+                                    <p>Relax and unwind in serene surroundings. Perfect for a stress-free getaway with
+                                        luxurious accommodations and rejuvenating spa treatments. This package includes
+                                        all meals, a spa session, and guided relaxation activities.</p>
+                                    <ul>
+                                        <li>Duration: 5 Days</li>
+                                        <li>Price: ₹15,000</li>
+                                        <li>Inclusions: Transport, Accommodation, Spa Treatments, All Meals</li>
+                                    </ul>
+                                    <h5>Additional Information:</h5>
+                                    <p>This tour offers the ultimate relaxation experience, ensuring you are fully
+                                        rejuvenated. Great for those seeking tranquility and peace, away from the hustle
+                                        and bustle of daily life!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#booking-modal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Tour -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="images/Cultural Tour.jpg" class="card-img-top img-fluid package-img"
+                                alt="Cultural Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">Cultural Tour</h5>
+                                <p class="card-text">Immerse yourself in India's rich cultural heritage.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#booking-modal">Book Now</a>
+                                <!-- View More Button -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#culturalModal">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Cultural Tour -->
+                    <div class="modal fade" id="culturalModal" tabindex="-1" aria-labelledby="culturalModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="culturalModalLabel">Cultural Tour Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Package Details:</h5>
+                                    <p>Immerse yourself in India's rich cultural heritage, visiting temples, historical
+                                        landmarks, and traditional festivals. This package is designed for culture
+                                        enthusiasts looking to experience the diversity of India's traditions, arts, and
+                                        architecture.</p>
+                                    <ul>
+                                        <li>Duration: 6 Days</li>
+                                        <li>Price: ₹12,000</li>
+                                        <li>Inclusions: Transport, Accommodation, Guided Tours to Cultural Sites, Meals
+                                        </li>
+                                    </ul>
+                                    <h5>Additional Information:</h5>
+                                    <p>Explore the vibrant arts, music, dance, and cuisine of India's most culturally
+                                        significant regions. Learn about the diverse heritage through guided tours and
+                                        special events.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#booking-modal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mystery Tour -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="images/Mystery Tour.png" class="card-img-top img-fluid package-img"
+                                alt="Mystery Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">Mystery Tour</h5>
+                                <p class="card-text">Embark on an exciting journey filled with surprises.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#booking-modal">Book Now</a>
+                                <!-- View More Button -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#mysteryModal">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Mystery Tour -->
+                    <div class="modal fade" id="mysteryModal" tabindex="-1" aria-labelledby="mysteryModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="mysteryModalLabel">Mystery Tour Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Package Details:</h5>
+                                    <p>Join us for an unforgettable adventure where the destination and experiences are
+                                        shrouded in mystery. Explore unknown locations and enjoy activities that will
+                                        keep you on your toes.</p>
+                                    <ul>
+                                        <li>Duration: 5 Days</li>
+                                        <li>Price: ₹18,000</li>
+                                        <li>Inclusions: Transport, Accommodation, Surprise Activities, Meals</li>
+                                    </ul>
+                                    <h5>Additional Information:</h5>
+                                    <p>Every day brings a new surprise, from thrilling activities to unexpected detours.
+                                        The Mystery Tour is perfect for those who love to explore the unknown and want
+                                        to experience the thrill of uncertainty.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#booking-modal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History Tour -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="images/History Tour.jpg" class="card-img-top img-fluid package-img"
+                                alt="History Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">History Tour</h5>
+                                <p class="card-text">Travel back in time and discover India's glorious past.</p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#booking-modal">Book Now</a>
+                                <!-- View More Button -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#historyModal">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for History Tour -->
+                    <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="historyModalLabel">History Tour Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Package Details:</h5>
+                                    <p>Experience the rich heritage and culture of India as you journey through historic
+                                        sites and iconic landmarks. From ancient monuments to colonial-era architecture,
+                                        this tour takes you through India's captivating past.</p>
+                                    <ul>
+                                        <li>Duration: 4 Days</li>
+                                        <li>Price: ₹10,000</li>
+                                        <li>Inclusions: Transport, Accommodation, Guided Historical Tours, Meals</li>
+                                    </ul>
+                                    <h5>Additional Information:</h5>
+                                    <p>The History Tour is perfect for history buffs and those wanting to connect with
+                                        India's ancient roots. Explore famous sites such as forts, temples, and museums
+                                        that tell the stories of India's glorious past.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#booking-modal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Literature Tour -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="images/Literature Tour.jpg" class="card-img-top img-fluid package-img"
+                                alt="Literature Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">Literature Tour</h5>
+                                <p class="card-text">Explore India's literary wonders and celebrate the power of words.
+                                </p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#booking-modal">Book Now</a>
+                                <!-- View More Button -->
+                                <a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#literatureModal">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for Literature Tour -->
+                    <div class="modal fade" id="literatureModal" tabindex="-1" aria-labelledby="literatureModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="literatureModalLabel">Literature Tour Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Package Details:</h5>
+                                    <p>Delve into India's rich literary heritage with a tour of its iconic literary
+                                        sites. From the birthplace of legendary writers to the settings of famous
+                                        novels, this tour offers a deep dive into India's literary legacy.</p>
+                                    <ul>
+                                        <li>Duration: 5 Days</li>
+                                        <li>Price: ₹14,000</li>
+                                        <li>Inclusions: Transport, Accommodation, Literary Site Visits, Meals</li>
+                                    </ul>
+                                    <h5>Additional Information:</h5>
+                                    <p>On this tour, visit landmarks that inspired some of India's greatest works of
+                                        literature. Whether you're a fan of poetry, novels, or plays, this tour will
+                                        leave you inspired and enriched by India's literary giants.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#booking-modal">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+
+        <!-- Frequently Asked Questions Section -->
+        <section id="faq" class="py-5">
+            <h2 class="my-5 text-center">Frequently Asked Questions<br>(FAQ)</h2>
+            <div class="accordion accordion-flush mx-auto" id="accordionFlushExample" style="max-width: 800px;">
+
+                <!-- Trip Comfort and Amenities -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            What amenities are provided during the trip?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            All our tours include comfortable transportation, air-conditioned accommodations, and
+                            complimentary meals. We also provide a travel guide and necessary travel accessories to make
+                            your journey smooth.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comfort and Trip Quality -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            How comfortable is the trip? Will I be able to relax?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            We prioritize comfort on all our trips. Our packages include high-quality accommodations,
+                            scenic routes, and plenty of leisure time for relaxation. You will have ample opportunities
+                            to unwind and enjoy the surroundings without stress.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment and Pricing -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            What payment methods are accepted?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            We accept all major credit cards, debit cards, and online payment options like PayPal. You
+                            can also choose to pay via bank transfer if you prefer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cancellation Policy -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            What is your cancellation policy?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            We offer a flexible cancellation policy. If you need to cancel your booking, you can do so
+                            up to 7 days before the start of your trip for a full refund. Cancellations made within 7
+                            days will incur a nominal fee.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety and Security -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            How do you ensure the safety of travelers during the tour?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Your safety is our priority. Our tours are conducted with the help of experienced guides and
+                            drivers who are trained in emergency protocols. We also ensure that all accommodations and
+                            transport meet safety standards.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dietary Restrictions -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            Can I request special dietary arrangements?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Yes, we can accommodate special dietary needs such as vegetarian, vegan, gluten-free, or
+                            allergy-friendly meals. Please inform us in advance, and we will ensure that your needs are
+                            taken care of.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Size and Customization -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                            aria-controls="flush-collapseSeven">
+                            Are the trips customizable for private groups?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Yes, we offer customization options for private groups. If you have a specific group size or
+                            want a tailor-made itinerary, feel free to contact us, and we will work to create a
+                            personalized tour experience.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Age Group -->
+                <div class="accordion-item rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEight" aria-expanded="false"
+                            aria-controls="flush-collapseEight">
+                            What is the recommended age group for the tours?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Our tours are designed for adults aged 18 and above. However, some family-friendly tours are
+                            available for children with adult supervision. For more details, please check the specific
+                            tour's terms and conditions.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-3 text-center">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:sasankasekharkundu24@gmail.com" class="text-white">sasankasekharkundu24@gmail.com</a></p>
+                    <p><i class="fas fa-phone-alt"></i> Phone: +91 8101008453</p>
+                </div>
+                <!-- Social Media Links -->
+                <div class="col-md-4 mb-3 text-center">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.instagram.com/__kuronotsubasa__/profilecard/?igsh=MWdyNHd2NDFzZWl3Yw==" target="_blank" class="text-white mx-3"><i class="bi bi-instagram"></i></i> Instagram</a>
+                </div>
+                <!-- About Us Section -->
+                <div class="col-md-4 mb-3 text-center">
+                    <h5>About Us</h5>
+                    <p>We provide curated travel packages for unforgettable experiences. Explore India's diversity through our custom-tailored tours. From relaxation to adventure, we've got you covered!</p>
+                </div>
+            </div>
+            <hr class="text-white">
+            <div class="text-center">
+                <p>&copy; 2024 IndianOdyssey. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
